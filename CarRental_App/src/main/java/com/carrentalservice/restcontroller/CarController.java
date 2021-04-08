@@ -1,6 +1,6 @@
 package com.carrentalservice.restcontroller;
 
-import com.carrentalservice.dto.CarDTO;
+import com.carrentalservice.DTO.CarDTO;
 import com.carrentalservice.entity.Car;
 import com.carrentalservice.service.CarService;
 import com.carrentalservice.transformer.CarTransformer;
