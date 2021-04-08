@@ -1,6 +1,6 @@
 package com.carrentalservice.mvccontroller;
 
-import com.carrentalservice.dto.CustomerDTO;
+import com.carrentalservice.DTO.CustomerDTO;
 import com.carrentalservice.entity.User;
 import com.carrentalservice.service.CustomerService;
 import com.carrentalservice.service.UserService;

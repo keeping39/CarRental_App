@@ -1,33 +1,24 @@
-package com.carrentalservice.entity;
+package com.carrentalservice.DTO;
 
-import javax.persistence.*;
-import java.util.ArrayList;
+import com.carrentalservice.entity.Status;
+
 import java.util.List;
 
-@Entity
-public class Car extends BaseEntity {
+public class CarDTO extends BaseEntityDTO {
 
     private String make;
     private String model;
-
-    @Enumerated(EnumType.STRING)
-    private BodyType bodyType;
-
+    private String bodyType;
     private int yearOfProduction;
     private String color;
     private int mileage;
-
-    @Enumerated(EnumType.STRING)
     private Status status;
-
     private Double amount;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    private Branch branch = new Branch();
-
+    private BranchDTO branchDTO;
     private String urlOfImage;
 
-    public Car(String make, String model, BodyType bodyType, int yearOfProduction, String color, int mileage, Status status, Double amount, Branch branch, String urlOfImage) {
+    public CarDTO(Long id, String make, String model, String bodyType, int yearOfProduction, String color, int mileage, Status status, Double amount, BranchDTO branchDTO, String urlOfImage) {
+        super(id);
         this.make = make;
         this.model = model;
         this.bodyType = bodyType;
@@ -36,11 +27,11 @@ public class Car extends BaseEntity {
         this.mileage = mileage;
         this.status = status;
         this.amount = amount;
-        this.branch = branch;
+        this.branchDTO = branchDTO;
         this.urlOfImage = urlOfImage;
     }
 
-    public Car() {
+    public CarDTO() {
     }
 
     public String getMake() {
@@ -59,11 +50,11 @@ public class Car extends BaseEntity {
         this.model = model;
     }
 
-    public BodyType getBodyType() {
+    public String getBodyType() {
         return bodyType;
     }
 
-    public void setBodyType(BodyType bodyType) {
+    public void setBodyType(String bodyType) {
         this.bodyType = bodyType;
     }
 
@@ -107,12 +98,12 @@ public class Car extends BaseEntity {
         this.amount = amount;
     }
 
-    public Branch getBranch() {
-        return branch;
+    public BranchDTO getBranchDTO() {
+        return branchDTO;
     }
 
-    public void setBranch(Branch branch) {
-        this.branch = branch;
+    public void setBranchDTO(BranchDTO branchDTO) {
+        this.branchDTO = branchDTO;
     }
 
     public String getUrlOfImage() {
@@ -123,3 +114,4 @@ public class Car extends BaseEntity {
         this.urlOfImage = urlOfImage;
     }
 }
+
