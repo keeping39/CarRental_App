@@ -22,12 +22,9 @@ public class Car extends BaseEntity {
 
     private Double amount;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    private Branch branch = new Branch();
-
     private String urlOfImage;
 
-    public Car(String make, String model, BodyType bodyType, int yearOfProduction, String color, int mileage, Status status, Double amount, Branch branch, String urlOfImage) {
+    public Car(String make, String model, BodyType bodyType, int yearOfProduction, String color, int mileage, Status status, Double amount, String urlOfImage) {
         this.make = make;
         this.model = model;
         this.bodyType = bodyType;
@@ -36,7 +33,6 @@ public class Car extends BaseEntity {
         this.mileage = mileage;
         this.status = status;
         this.amount = amount;
-        this.branch = branch;
         this.urlOfImage = urlOfImage;
     }
 
@@ -105,14 +101,6 @@ public class Car extends BaseEntity {
 
     public void setAmount(Double amount) {
         this.amount = amount;
-    }
-
-    public Branch getBranch() {
-        return branch;
-    }
-
-    public void setBranch(Branch branch) {
-        this.branch = branch;
     }
 
     public String getUrlOfImage() {

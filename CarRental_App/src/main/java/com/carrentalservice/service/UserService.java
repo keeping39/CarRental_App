@@ -1,11 +1,11 @@
-package com.carrentalservice.service;
+package com.sda.carrentalservice.service;
 
-import com.carrentalservice.DTO.CustomerDTO;
-import com.carrentalservice.DTO.UserDTO;
-import com.carrentalservice.entity.Customer;
-import com.carrentalservice.entity.User;
-import com.carrentalservice.repository.CustomerRepository;
-import com.carrentalservice.repository.UserRepository;
+import com.sda.carrentalservice.dto.CustomerDTO;
+import com.sda.carrentalservice.dto.UserDTO;
+import com.sda.carrentalservice.entity.Customer;
+import com.sda.carrentalservice.entity.User;
+import com.sda.carrentalservice.repository.CustomerRepository;
+import com.sda.carrentalservice.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
