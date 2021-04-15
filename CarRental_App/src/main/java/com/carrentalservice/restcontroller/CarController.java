@@ -1,7 +1,12 @@
-package com.sda.carrentalservice.restcontroller;
+package com.carrentalservice.restcontroller;
 
+<<<<<<< HEAD
+import com.carrentalservice.DTO.CarDTO;
+import com.carrentalservice.entity.Car;
+=======
 import com.sda.carrentalservice.dto.CarDTO;
 import com.sda.carrentalservice.entity.Car;
+>>>>>>> 2f6c2a80cbfbe68f957b0768bc4ca2dee36237bb
 import com.carrentalservice.service.CarService;
 import com.carrentalservice.transformer.CarTransformer;
 import org.springframework.beans.factory.annotation.Autowired;

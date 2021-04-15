@@ -1,6 +1,6 @@
-package com.sda.carrentalservice.repository;
+package com.carrentalservice.repository;
 
-import com.sda.carrentalservice.entity.Car;
+import com.carrentalservice.entity.Car;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

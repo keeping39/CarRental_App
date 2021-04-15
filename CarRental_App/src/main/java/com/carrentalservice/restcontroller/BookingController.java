@@ -1,9 +1,9 @@
-package com.sda.carrentalservice.restcontroller;
+package com.carrentalservice.restcontroller;
 
-import com.sda.carrentalservice.dto.BookingDTO;
-import com.sda.carrentalservice.entity.Booking;
-import com.sda.carrentalservice.service.BookingService;
-import com.sda.carrentalservice.transformer.BookingTransfromer;
+import com.carrentalservice.DTO.BookingDTO;
+import com.carrentalservice.entity.Booking;
+import com.carrentalservice.service.BookingService;
+import com.carrentalservice.transformer.BookingTransfromer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
