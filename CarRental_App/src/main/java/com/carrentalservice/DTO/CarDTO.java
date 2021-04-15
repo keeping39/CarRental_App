@@ -1,6 +1,6 @@
-package com.sda.carrentalservice.dto;
+package com.carrentalservice.DTO;
 
-import com.sda.carrentalservice.entity.Status;
+import com.carrentalservice.entity.Status;
 
 import java.util.List;
 

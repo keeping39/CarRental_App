@@ -1,4 +1,4 @@
-package com.sda.carrentalservice.dto;
+package com.carrentalservice.DTO;
 
 import java.util.List;
 
