@@ -1,9 +1,9 @@
-package com.sda.carrentalservice.restcontroller;
+package com.carrentalservice.restcontroller;
 
-import com.sda.carrentalservice.dto.CarDTO;
-import com.sda.carrentalservice.entity.Car;
-import com.sda.carrentalservice.service.CarService;
-import com.sda.carrentalservice.transformer.CarTransformer;
+import com.carrentalservice.DTO.CarDTO;
+import com.carrentalservice.entity.Car;
+import com.carrentalservice.service.CarService;
+import com.carrentalservice.transformer.CarTransformer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
