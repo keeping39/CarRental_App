@@ -1,4 +1,4 @@
-package com.carrentalservice.DTO;
+package com.sda.carrentalservice.dto;
 
 import javax.validation.constraints.NotBlank;
 
