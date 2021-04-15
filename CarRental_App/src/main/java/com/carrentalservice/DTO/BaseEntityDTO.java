@@ -1,4 +1,4 @@
-package com.carrentalservice.DTO;
+package com.sda.carrentalservice.dto;
 
 public class BaseEntityDTO {
 
@@ -19,4 +19,3 @@ public class BaseEntityDTO {
         this.id = id;
     }
 }
-

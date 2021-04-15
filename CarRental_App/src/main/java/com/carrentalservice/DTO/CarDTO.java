@@ -1,6 +1,6 @@
-package com.carrentalservice.DTO;
+package com.sda.carrentalservice.dto;
 
-import com.carrentalservice.entity.Status;
+import com.sda.carrentalservice.entity.Status;
 
 import java.util.List;
 
@@ -14,10 +14,11 @@ public class CarDTO extends BaseEntityDTO {
     private int mileage;
     private Status status;
     private Double amount;
+    private List<BookingDTO> bookingListDTO;
     private BranchDTO branchDTO;
     private String urlOfImage;
 
-    public CarDTO(Long id, String make, String model, String bodyType, int yearOfProduction, String color, int mileage, Status status, Double amount, BranchDTO branchDTO, String urlOfImage) {
+    public CarDTO(Long id, String make, String model, String bodyType, int yearOfProduction, String color, int mileage, Status status, Double amount, List<BookingDTO> bookingListDTO, BranchDTO branchDTO, String urlOfImage) {
         super(id);
         this.make = make;
         this.model = model;
@@ -27,6 +28,7 @@ public class CarDTO extends BaseEntityDTO {
         this.mileage = mileage;
         this.status = status;
         this.amount = amount;
+        this.bookingListDTO = bookingListDTO;
         this.branchDTO = branchDTO;
         this.urlOfImage = urlOfImage;
     }
@@ -98,6 +100,14 @@ public class CarDTO extends BaseEntityDTO {
         this.amount = amount;
     }
 
+    public List<BookingDTO> getBookingListDTO() {
+        return bookingListDTO;
+    }
+
+    public void setBookingListDTO(List<BookingDTO> bookingListDTO) {
+        this.bookingListDTO = bookingListDTO;
+    }
+
     public BranchDTO getBranchDTO() {
         return branchDTO;
     }
@@ -114,4 +124,3 @@ public class CarDTO extends BaseEntityDTO {
         this.urlOfImage = urlOfImage;
     }
 }
-
