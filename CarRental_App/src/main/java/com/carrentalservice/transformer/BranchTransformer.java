@@ -1,7 +1,7 @@
-package com.sda.carrentalservice.transformer;
+package com.carrentalservice.transformer;
 
-import com.sda.carrentalservice.dto.BranchDTO;
-import com.sda.carrentalservice.entity.Branch;
+import com.carrentalservice.DTO.BranchDTO;
+import com.carrentalservice.entity.Branch;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
