@@ -1,7 +1,7 @@
-package com.sda.carrentalservice.transformer;
+package com.carrentalservice.transformer;
 
-import com.sda.carrentalservice.dto.BookingDTO;
-import com.sda.carrentalservice.entity.Booking;
+import com.carrentalservice.DTO.BookingDTO;
+import com.carrentalservice.entity.Booking;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 

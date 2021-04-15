@@ -1,7 +1,7 @@
-package com.sda.carrentalservice.transformer;
+package com.carrentalservice.transformer;
 
-import com.sda.carrentalservice.dto.EmployeeDTO;
-import com.sda.carrentalservice.entity.Employee;
+import com.carrentalservice.DTO.EmployeeDTO;
+import com.carrentalservice.entity.Employee;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
