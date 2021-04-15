@@ -1,7 +1,7 @@
-package com.carrentalservice.transformer;
+package com.sda.carrentalservice.transformer;
 
-import com.carrentalservice.DTO.CarDTO;
-import com.carrentalservice.entity.Car;
+import com.sda.carrentalservice.dto.CarDTO;
+import com.sda.carrentalservice.entity.Car;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
@@ -20,4 +20,3 @@ public class CarTransformer {
         return carDTO;
     }
 }
-
