@@ -1,6 +1,6 @@
-package com.carrentalservice.repository;
+package com.sda.carrentalservice.repository;
 
-import com.carrentalservice.entity.User;
+import com.sda.carrentalservice.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -10,4 +10,3 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<User, Long> {
     Optional<User> findByUsername(String username);
 }
-
