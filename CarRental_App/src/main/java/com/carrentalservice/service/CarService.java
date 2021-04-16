@@ -1,5 +1,6 @@
 package com.carrentalservice.service;
 
+import com.carrentalservice.entity.Booking;
 import com.carrentalservice.entity.Branch;
 import com.carrentalservice.entity.Car;
 import com.carrentalservice.exception.NotFoundException;
@@ -7,7 +8,10 @@ import com.carrentalservice.repository.BranchRepository;
 import com.carrentalservice.repository.CarRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
+import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -54,5 +58,15 @@ public class CarService {
 
     public Car findCarByName(String searchString) {
         return carRepository.findCarByName(searchString);
+    }
+
+    public List<Car> findCarsByMake(Optional<String> make) {
+        return new ArrayList<>(carRepository.findCarsByMake(make));
+    }
+
+    public Car getCarById(@ModelAttribute("booking") @Valid Booking booking) {
+        Car carById = findCarById(booking.getCar().getId());
+        booking.setCar(carById);
+        return carById;
     }
 }

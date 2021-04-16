@@ -23,10 +23,9 @@ public class SearchMVCController {
     private final RentalOfficeService rentalOfficeService;
     private final RentalService rentalService;
     private final ReturnCarService returnCarService;
-    private final RevenueService revenueService;
 
     @Autowired
-    public SearchMVCController(BookingService bookingService, BranchService branchService, CarService carService, CustomerService customerService, EmployeeService employeeService, RentalService rentalService, RentalOfficeService rentalOfficeService, ReturnCarService returnCarService, RevenueService revenueService) {
+    public SearchMVCController(BookingService bookingService, BranchService branchService, CarService carService, CustomerService customerService, EmployeeService employeeService, RentalService rentalService, RentalOfficeService rentalOfficeService, ReturnCarService returnCarService) {
         this.bookingService = bookingService;
         this.branchService = branchService;
         this.carService = carService;
@@ -35,7 +34,6 @@ public class SearchMVCController {
         this.rentalService = rentalService;
         this.rentalOfficeService = rentalOfficeService;
         this.returnCarService = returnCarService;
-        this.revenueService = revenueService;
     }
 
     @PostMapping(path = "/search")
@@ -48,7 +46,6 @@ public class SearchMVCController {
         model.addAttribute("rentals", this.rentalService.findRentalByName(searchString));
         model.addAttribute("rentalOffices", this.rentalOfficeService.findRentalOfficeByName(searchString));
         model.addAttribute("returnCars", this.returnCarService.findReturnCarByName(searchString));
-        model.addAttribute("revenues", this.revenueService.findRevenueByDetails(search));
         ObjectError error = new ObjectError("search", "Nothing found!");
         bindingResult.addError(error);
         return "index";
