@@ -1,4 +1,4 @@
-package com.sda.carrentalservice.service;
+package com.carrentalservice.service;
 
 import com.carrentalservice.entity.Car;
 import com.carrentalservice.entity.Employee;
