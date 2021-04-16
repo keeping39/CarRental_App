@@ -1,13 +1,13 @@
-package com.sda.carrentalservice.service;
+package com.carrentalservice.service;
 
-import com.sda.carrentalservice.entity.Booking;
-import com.sda.carrentalservice.entity.Calculator;
-import com.sda.carrentalservice.entity.Car;
-import com.sda.carrentalservice.entity.Customer;
-import com.sda.carrentalservice.exception.NotFoundException;
-import com.sda.carrentalservice.repository.BookingRepository;
-import com.sda.carrentalservice.repository.CarRepository;
-import com.sda.carrentalservice.repository.CustomerRepository;
+import com.carrentalservice.entity.Booking;
+import com.carrentalservice.entity.Calculator;
+import com.carrentalservice.entity.Car;
+import com.carrentalservice.entity.Customer;
+import com.carrentalservice.exception.NotFoundException;
+import com.carrentalservice.repository.BookingRepository;
+import com.carrentalservice.repository.CarRepository;
+import com.carrentalservice.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

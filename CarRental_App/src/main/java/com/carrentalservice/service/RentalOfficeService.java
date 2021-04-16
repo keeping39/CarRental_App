@@ -1,9 +1,9 @@
-package com.sda.carrentalservice.service;
+package com.carrentalservice.service;
 
-import com.sda.carrentalservice.entity.Car;
-import com.sda.carrentalservice.entity.RentalOffice;
-import com.sda.carrentalservice.exception.NotFoundException;
-import com.sda.carrentalservice.repository.RentalOfficeRepository;
+import com.carrentalservice.entity.Car;
+import com.carrentalservice.entity.RentalOffice;
+import com.carrentalservice.exception.NotFoundException;
+import com.carrentalservice.repository.RentalOfficeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

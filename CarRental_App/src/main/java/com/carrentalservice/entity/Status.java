@@ -1,4 +1,4 @@
-package com.carrentalservice.entity;
+package com.sda.carrentalservice.entity;
 
 public enum Status {
     CHOOSE("Choose"),

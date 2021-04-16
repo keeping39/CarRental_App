@@ -12,6 +12,9 @@ public class Customer extends User {
     private String email;
     private String address;
 
+    @OneToMany(mappedBy = "customer", fetch = FetchType.EAGER)
+    private List<Booking> bookingList = new ArrayList<>();
+
     public Customer(String firstName, String lastName, String email, String address) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -58,5 +61,11 @@ public class Customer extends User {
         this.address = address;
     }
 
-}
+    public List<Booking> getBookingList() {
+        return bookingList;
+    }
 
+    public void setBookingList(List<Booking> bookingList) {
+        this.bookingList = bookingList;
+    }
+}
