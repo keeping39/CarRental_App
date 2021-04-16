@@ -1,10 +1,10 @@
 package com.carrentalservice.service;
 
-import com.carrentalservice.entity.Car;
 import com.carrentalservice.entity.Customer;
 import com.carrentalservice.exception.NotFoundException;
 import com.carrentalservice.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -58,4 +58,10 @@ public class CustomerService {
     public Customer findCustomerByName(String searchString) {
         return customerRepository.findCustomerByName(searchString);
     }
+
+    public Customer getCustomerLoggedIn() {
+        String name = SecurityContextHolder.getContext().getAuthentication().getName();
+        return findCustomerByUsername(name);
+    }
+
 }

@@ -2,8 +2,10 @@ package com.carrentalservice.service;
 
 import com.carrentalservice.entity.Branch;
 import com.carrentalservice.entity.Car;
+import com.carrentalservice.entity.RentalOffice;
 import com.carrentalservice.exception.NotFoundException;
 import com.carrentalservice.repository.BranchRepository;
+import com.carrentalservice.repository.RentalOfficeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,10 +16,12 @@ import java.util.Optional;
 public class BranchService {
 
     private final BranchRepository branchRepository;
+    private final RentalOfficeRepository rentalOfficeRepository;
 
     @Autowired
-    public BranchService(BranchRepository branchRepository) {
+    public BranchService(BranchRepository branchRepository, RentalOfficeRepository rentalOfficeRepository) {
         this.branchRepository = branchRepository;
+        this.rentalOfficeRepository = rentalOfficeRepository;
     }
 
     public Branch saveBranch(Branch branch) {
@@ -26,6 +30,15 @@ public class BranchService {
 
     public List<Branch> findAllBranches() {
         return branchRepository.findAll();
+    }
+
+    public void deleteBranchById(Long id) {
+        Branch branchById = this.findBranchById(id);
+        RentalOffice rentalOffice = branchById.getRentalOffice();
+        rentalOffice.getBranches().remove(branchById);
+        rentalOfficeRepository.save(rentalOffice);
+
+        branchRepository.deleteById(id);
     }
 
     public Branch findBranchById(Long id) {
@@ -42,4 +55,7 @@ public class BranchService {
         return branchRepository.count();
     }
 
+    public Branch findBranchByName(String searchString) {
+        return branchRepository.findBranchByName(searchString);
+    }
 }
